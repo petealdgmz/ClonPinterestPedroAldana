@@ -1,0 +1,272 @@
+/* Cambia color de fondo en dispositivos pequeños */
+@media (max-width: 600px) {
+  body {
+    background-color: #000;
+  }
+}
+
+/* ESTILOS PARA LA BARRA DE OPCIONES SUPERIOR */
+.navbar {
+    display: flex; /* Colocar 3 div en su respectiva posicion */
+    justify-content: space-between; /* Distribuir Elementos: */
+    align-items: center;
+    /* background-color: #ffe0e9; */
+    background-color: white;
+    height: 70px;
+    padding: 10 20px;
+    position: fixed; /* seguir scroll */
+    z-index: 6;
+    top: 0;
+    width: 100%;
+    /* margin-top: 10px; */
+}
+.navbar button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btnpin img{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 25px;
+    padding: 10px, 10px;
+    top: 10px;
+}
+/* #b1:hover{
+    background-color: black;
+    border-radius: 40%;
+    color: white;
+    padding: 15px 18px;
+} */
+
+/* Boton Inico con fondo Negro */
+.btnInicio{
+    background-color: black;
+    border-radius: 40%;
+    color: white;
+    padding: 15px 18px;
+}
+.navbar-cent {
+    flex: 1; /* Ocupa espacio sobrante entre izq y der*/
+    margin: 0 20px;
+}
+  
+.navbar-cent input {
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+    border: lightblue;
+    padding: 5px;
+    font-size: 16px;
+    background-image: url('res/lupa.png');
+    background-color: #f5ecec;
+    margin-left: -2%;
+}
+  
+.navbar-der button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.navbar-der button:hover{
+    background-color: #f5ecec;
+    border-radius: 50%;
+    padding: 10px 10px;
+}
+  
+.navbar-der button img {
+    width: 28px;
+    height: 28px;
+ }
+
+
+/* MENU DESPLEGABLE DEL BOTON "CREAR"  */
+
+.desplegMenu {
+  position: relative;
+  display: inline-block;
+}
+
+
+.des {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.desOpc {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  top: 50px;
+  left: 10px;
+  border-radius: 5%;
+}
+
+.desOpc a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.desOpc a:hover {
+  background-color: #ddd;
+}
+
+.desplegMenu:hover .desOpc {
+  display: block;
+}
+
+
+
+/* ESTILO PARA IMAGENES */
+
+.IMGContainer {
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1px; */
+    margin-top: 65px;
+    display: flex;
+} 
+.columnas{
+    flex: 20%;
+    /* padding: 5px; */
+}
+.IMGdiv {
+    border: none;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+  
+.IMGdiv img {
+    width: 100%;
+    /* height: auto; */
+    display: block;
+    border-radius: 7%;
+    padding: 5px;
+    
+}
+
+.IMGdiv:hover{
+    opacity: 0.7;
+}
+.guardarbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.IMGdiv:hover .guardarbtn{
+    opacity: 1;
+    display: block;
+}
+
+.btn1{
+    z-index: 4;
+    position: absolute;
+    bottom: 25px;
+    right: 70px;
+    width: 40px; 
+    height: 40px;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    padding: 7px 7px;
+    transition: opacity 0.3s;
+    opacity: 0;
+    padding-bottom: 5%;
+    padding-right: 3%;
+    cursor: pointer;
+ 
+}
+.btn2{
+    z-index: 4;
+    position: absolute;
+    bottom: 25px; 
+    right: 20px; 
+    width: 40px; 
+    height: 40px; 
+    border: none; 
+    background-color: white; 
+    border-radius: 50%;
+    transition: opacity 0.3s;
+    opacity: 0;
+    padding-bottom: 2%;
+    padding-right: 3%;
+    cursor: pointer;
+    
+}
+
+.btn1 img, .btn2 img{
+    width: 68%;
+    height: 90%;
+}
+.btn1, .btn2{
+    display: none;
+}
+
+.IMGdiv:hover .btn1, .IMGdiv:hover .btn2{
+    display: block;
+    opacity: 1;
+}
+/* .btn1{
+    margin-right: 5px;
+}
+.btn2{
+    margin-right: 10px;
+    padding-right: 2px;
+} */
+
+
+/* borde a algunas imagenes */
+#imgcambio{
+    border: black;
+    background-color: black;
+}
+
+/* boton pregunta */
+
+.btnpregunta button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    cursor: pointer;
+    border: white;
+    
+}
+.btnpregunta button img{
+    width: 40%;
+    height: 40%;
+    /* border-radius: 50%; */
+
+}
